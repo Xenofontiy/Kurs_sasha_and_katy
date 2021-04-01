@@ -7,6 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <ListView x:Name="Cities_ListView" HorizontalAlignment="Left" Height="295" VerticalAlignment="Top" Width="160" Margin="25,50,0,0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <TextBlock Text="{Binding name}"/>
+                        <TextBlock Text=" "/>
+                        <TextBlock Text="{Binding time}"/>
+                        <TextBlock Text=" часа"/>
+                    </WrapPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Content="Подгрузка информации" HorizontalAlignment="Left" Margin="230,50,0,0" VerticalAlignment="Top" Width="150" Height="30" Click="Button_Click"/>
+        <Label x:Name="Test" Content="" HorizontalAlignment="Left" Margin="230,120,0,0" VerticalAlignment="Top" Height="249" Width="477"/>
+        <Button x:Name="Timetable_Button" Content="Создание расписания" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="430,50,0,0" Height="30" Click="Timetable_Button_Click"/>
+
     </Grid>
 </Window>
